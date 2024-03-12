@@ -22,4 +22,17 @@ header h1 {
     font-size: 38px;
 }
 
+.container {
+padding:20px 65px; 
+
+}
+
+.dateContainer {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+border: solid, red, 10px;
+
+}
+
 
