@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: whitesmoke;
+}
+
+    /*header styling*/
+header {
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: blue;
+    color: black;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 38px;
+}
