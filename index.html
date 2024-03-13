@@ -11,34 +11,35 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main class="content">
         <div class="container">
-            <div class="currentInfo">
                 <div class="dateContainer">
+                    <div class="currentInfo">
                     <div class="cityName" id="cityName">Fraser</div>
                     <div class="time" id="time">
                         12:01 <span id="am-pm"></span>
                     </div>
                     <div class="date" id="date">
-                        Tuesday March 12
+                        3/12/2024
                         <img src="" alt="weather icon" class="wIcon">
+                    </div>
                     </div>
                     <div class="others" id="currentWeatherItems">
                         <div class="weatherItem">
                             <div>Temp</div>
                             <div>60&#176</div>
                         </div>
+                        <span>
                         <div class="weatherItem">
                             <div>Wind</div>
                             <div>6.42 MPH</div>
                         </div>
+                        <span>
                         <div class="weatherItem">
                             <div>Humidity</div>
                             <div>85.6 %</div>
                         </div>
                     </div>
                 </div>
-            </div>
 
             <div class="five-day-forecast" id="five-day-forecast">
                 <div class="futureForecast">
@@ -79,8 +80,10 @@
             </div>
         </div>
 
-    </main>
     <aside class="cities">
+        <label for="citySearch"><h2>Search for a City:</h2></label>
+        <input type="text" id="citySearch" name="citySearch"/>
+        <button id="searchBtn" class="searchBtn">Search</button>
 
     </aside>
     <script src="./assets/script.js"></script>
