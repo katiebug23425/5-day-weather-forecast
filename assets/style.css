@@ -3,48 +3,50 @@
 }
 
 * {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: whitesmoke;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: whitesmoke;
 }
 
     /*header styling*/
 header {
-    padding: 10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: blue;
-    color: black;
-    text-align: center;
+padding: 10px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: blue;
+color: black;
+text-align: center;
 }
 
 header h1 {
-    font-size: 38px;
+font-size: 38px;
 }
 
 .parentContainer {
 display: inline-flex;
 padding-left: 20px;
 padding-top: 10px;
+flex: 2;
 }
 
 .dateContainer {
-  display: flex;
-  padding: 25px;
-  border: 3px solid black;
-  margin-bottom: 15px;
-  margin-left: 20px;
+display: flex;
+padding: 25px;
+width: 75vw;
+border: 3px solid black;
+margin-bottom: 15px;
+margin-left: 20px;
+justify-content: space-evenly;
 }
 
 .currentInfo {
 display: flex;
-flex-wrap: wrap;
+justify-content: space-between;
+gap: 35px;
 font-size: x-large;
 font-weight: bolder;
-justify-content: space-evenly;
 }
 
-.time #am-pm {
-font-size: small;
-
+.time #am-pm, #mph {
+font-size: x-small;
 }
 
 .others {
@@ -57,6 +59,7 @@ margin-bottom: 25px;
 .weatherItem {
 display: flex;
 justify-content: space-between;
+gap: 25px;
 }
 
 .five-day-forecast {
@@ -66,16 +69,26 @@ flex-wrap: wrap;
 }
 
 button {
-    display: inline-block;
-    cursor: pointer; 
-    color: azure;
-    background-color:blue;
-    border-radius: 6px;
-    margin: 5px;
-    padding: 8px;
-    border: 0;
-    }
+display: inline-block;
+cursor: pointer; 
+color: azure;
+background-color:blue;
+border-radius: 6px;
+margin: 5px;
+padding: 8px;
+border: 0;
+}
     
-    button:hover {
-    background-color: palevioletred;
-    }
+button:hover {
+background-color: palevioletred;
+}
+
+.five-day-forecast {
+display: flex;
+padding: 25px;
+border: 3px solid black;
+width: 100vw;
+position: fixed;
+bottom: 0;
+
+}

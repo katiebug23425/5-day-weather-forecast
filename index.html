@@ -13,11 +13,11 @@
     </header>
        <div class="container">
             <div class="parentContainer">
-                <aside class="cities">
+                <div class="cities">
                     <label for="citySearch"><h2>Search for a City:</h2></label>
                  <input type="text" id="citySearch" name="citySearch"/>
                     <button id="searchBtn" class="searchBtn">Search</button>
-                </aside>
+                </div>
                 <div class="dateContainer">
                     <div class="currentInfo">
                      <div class="cityName" id="cityName">Fraser</div>
@@ -31,17 +31,17 @@
                     </div>
                     <div class="others" id="currentWeatherItems">
                         <div class="weatherItem">
-                            <div>Temp</div>
+                            <div>Temp:</div>
                             <div>60&#176</div>
                         </div>
                         <span>
                         <div class="weatherItem">
-                            <div>Wind</div>
-                            <div>6.42 MPH</div>
+                            <div>Wind:</div>
+                            <div>6.42 <span id="mph">MPH</span></div>
                         </div>
                         <span>
                         <div class="weatherItem">
-                            <div>Humidity</div>
+                            <div>Humidity:</div>
                             <div>85.6 %</div>
                         </div>
                     </div>
@@ -84,7 +84,15 @@
                     <div class="humidity">Humidity: 57 %</div>
                 </div>
             </div>
+            <aside>
+                <ul class="prevCities">
+                    <li>Levering</li>
+                    <li>Cross Village</li>
+                    <li>Roseville</li>
+                </ul>
+            </aside>
         </div>
+       
     <script src="./assets/script.js"></script>
 </body>
 </html>
