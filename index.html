@@ -11,17 +11,23 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-        <div class="container">
+       <div class="container">
+            <div class="parentContainer">
+                <aside class="cities">
+                    <label for="citySearch"><h2>Search for a City:</h2></label>
+                 <input type="text" id="citySearch" name="citySearch"/>
+                    <button id="searchBtn" class="searchBtn">Search</button>
+                </aside>
                 <div class="dateContainer">
                     <div class="currentInfo">
-                    <div class="cityName" id="cityName">Fraser</div>
-                    <div class="time" id="time">
-                        12:01 <span id="am-pm"></span>
-                    </div>
-                    <div class="date" id="date">
+                     <div class="cityName" id="cityName">Fraser</div>
+                     <div class="time" id="time">
+                        12:01 <span id="am-pm">PM</span>
+                     </div>
+                        <div class="date" id="date">
                         3/12/2024
                         <img src="" alt="weather icon" class="wIcon">
-                    </div>
+                        </div>
                     </div>
                     <div class="others" id="currentWeatherItems">
                         <div class="weatherItem">
@@ -40,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
             <div class="five-day-forecast" id="five-day-forecast">
                 <div class="futureForecast">
                     <div class="futureDate">3/13/2024</div>
@@ -79,13 +85,6 @@
                 </div>
             </div>
         </div>
-
-    <aside class="cities">
-        <label for="citySearch"><h2>Search for a City:</h2></label>
-        <input type="text" id="citySearch" name="citySearch"/>
-        <button id="searchBtn" class="searchBtn">Search</button>
-
-    </aside>
     <script src="./assets/script.js"></script>
 </body>
 </html>
