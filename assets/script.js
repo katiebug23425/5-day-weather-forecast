@@ -24,10 +24,34 @@ searchBtn.addEventListener('click', search);
 function search() {
     let cityName = document.getElementById('citySearch').value;
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=e0bac09d544377cea613b7a883eae4f3`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=e0bac09d544377cea613b7a883eae4f3`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            console.log(data)
+            showWeatherData(data)
+        })}
 
-        });
-}
+        function showWeatherData(data) {
+            if (data.current && data.current.feels_like) {
+                let { temp, feels_like, humidity, wind_speed } = data.current;
+                currentWeatherItemsEl.innerHTML = `
+                    <div class="weatherItem">
+                        <div>Temp:</div>
+                        <div>${temp}&#176</div>
+                    </div>
+                    <div class="weatherItem">
+                        <div>Feels Like:</div>
+                        <div>${feels_like}&#176</div>
+                    </div>
+                    <div class="weatherItem">
+                        <div>Wind:</div>
+                        <div>${wind_speed}<span id="mph">MPH</span></div>
+                    </div>
+                    <div class="weatherItem">
+                        <div>Humidity:</div>
+                        <div>${humidity}%</div>
+                    </div>`;
+            } else {
+                currentWeatherItemsEl.innerHTML = 'Weather data not available.';
+            }
+        }
