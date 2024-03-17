@@ -2,6 +2,9 @@ const timeEl = document.getElementById('time');
 const dateEl = document.getElementById('date');
 const currentWeatherItemsEl = document.getElementById('currentWeatherItems');
 const weatherForecastEl = document.getElementById('five-day-forecast');
+const searchBtn = document.getElementById('searchBtn');
+
+const ApiKey = 'e0bac09d544377cea613b7a883eae4f3';
 
 setInterval(() => {
   const time = new Date();
@@ -18,3 +21,7 @@ setInterval(() => {
   dateEl.innerHTML = month + '/' + date; 
 
 }, 1000);
+
+function getWeatherData () {
+
+}
