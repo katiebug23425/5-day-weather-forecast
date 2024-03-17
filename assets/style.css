@@ -31,7 +31,8 @@ flex: 2;
 display: flex;
 padding: 25px;
 width: 75vw;
-border: 3px solid black;
+border: 5px solid blue;
+border-radius: 10px;
 margin-bottom: 15px;
 margin-left: 20px;
 justify-content: space-evenly;
@@ -90,5 +91,17 @@ border: 3px solid black;
 width: 100vw;
 position: fixed;
 bottom: 0;
+}
 
+.futureForecast {
+border: 5px solid blue;
+border-radius: 10px;
+padding: 10px;
+}
+.prevCities li {
+border: 2px solid black;
+border-radius: 5px;
+background-color: aqua;
+max-width: 175px;
+list-style-type: none;
 }
