@@ -31,27 +31,20 @@ function search() {
             showWeatherData(data)
         })}
 
+
         function showWeatherData(data) {
-            if (data.current && data.current.feels_like) {
-                let { temp, feels_like, humidity, wind_speed } = data.current;
-                currentWeatherItemsEl.innerHTML = `
-                    <div class="weatherItem">
-                        <div>Temp:</div>
-                        <div>${temp}&#176</div>
-                    </div>
-                    <div class="weatherItem">
-                        <div>Feels Like:</div>
-                        <div>${feels_like}&#176</div>
-                    </div>
-                    <div class="weatherItem">
-                        <div>Wind:</div>
-                        <div>${wind_speed}<span id="mph">MPH</span></div>
-                    </div>
-                    <div class="weatherItem">
-                        <div>Humidity:</div>
-                        <div>${humidity}%</div>
-                    </div>`;
-            } else {
-                currentWeatherItemsEl.innerHTML = 'Weather data not available.';
-            }
+            let { temp, humidity, wind_speed } = data.list;
+            currentWeatherItemsEl.innerHTML = `
+                <div class="weatherItem">
+                    <div>Temp:</div>
+                    <div>${temp}&#176</div>
+                </div>
+                <div class="weatherItem">
+                    <div>Wind:</div>
+                    <div>${wind_speed}<span id="mph">MPH</span></div>
+                </div>
+                <div class="weatherItem">
+                    <div>Humidity:</div>
+                    <div>${humidity}%</div>
+                </div>`;
         }
