@@ -52,14 +52,3 @@ function search() {
                 let name = data.city.name;
                 updatedCityName.innerHTML = `${name}`
         }
-
-        
-
-        function updateCity(data) {
-            let {wind_speed } = data.list[0].wind;
-            currentWeatherItemsEl.innerHTML = `
-                <div class="weatherItem">
-                    <div>Wind:</div>
-                    <div>${wind_speed}<span id="mph">MPH</span></div>
-                </div>`;
-        }
