@@ -34,7 +34,8 @@ function search() {
 
 
         function showWeatherData(data) {
-            let { temp, wind_speed, humidity} = data.list[0].main;
+            let { temp, humidity} = data.list[0].main;
+            let wind_speed = data.list[0].wind.speed
             currentWeatherItemsEl.innerHTML = `
                 <div class="weatherItem">
                     <div>Temp:</div>
@@ -51,4 +52,9 @@ function search() {
 
                 let name = data.city.name;
                 updatedCityName.innerHTML = `${name}`
+
+        }
+
+        function show5DayForecast(data) {
+            let 
         }
